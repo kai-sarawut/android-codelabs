@@ -6,8 +6,10 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.jake.codelabs.uicomponent.R
+import kotlinx.android.synthetic.main.fragment_page_five.*
 
 class PageFiveFragment  : Fragment(R.layout.fragment_page_five){
+
     companion object {
         fun newInstance(): PageFiveFragment {
             return PageFiveFragment()

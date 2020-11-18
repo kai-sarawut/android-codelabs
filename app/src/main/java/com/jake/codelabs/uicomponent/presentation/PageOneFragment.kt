@@ -16,6 +16,9 @@ class PageOneFragment  : Fragment(R.layout.fragment_page_one){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //Let fragment survive configuration change
+        retainInstance = true
+
         Log.d("#dev", "PageOneFragment::onCreate")
         Toast.makeText(requireContext(), "PageOneFragment::onCreate", Toast.LENGTH_SHORT).show()
     }
