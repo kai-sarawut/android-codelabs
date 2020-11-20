@@ -2,9 +2,10 @@ package com.jake.codelabs.uicomponent
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.jake.codelabs.uicomponent.presentation.*
+import com.jake.codelabs.uicomponent.features.pagefour.PageFourFragment
+import com.jake.codelabs.uicomponent.features.pageone.PageOneFragment
+import com.jake.codelabs.uicomponent.features.pagethree.PageThreeFragment
+import com.jake.codelabs.uicomponent.features.pagetwo.PageTwoFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

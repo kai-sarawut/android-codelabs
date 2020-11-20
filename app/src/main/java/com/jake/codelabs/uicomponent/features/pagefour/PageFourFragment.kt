@@ -1,4 +1,4 @@
-package com.jake.codelabs.uicomponent.presentation
+package com.jake.codelabs.uicomponent.features.pagefour
 
 import android.os.Bundle
 import android.util.Log

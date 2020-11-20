@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_pageTwoFragment"
+    app:startDestination="@id/pageTwoFragment">
+    <fragment
+        android:id="@+id/pageTwoFragment"
+        android:name="com.jake.codelabs.uicomponent.features.pagetwo.PageTwoFragment"
+        android:label="PageTwoFragment"
+        tools:layout="@layout/fragment_page_two" />
+</navigation>

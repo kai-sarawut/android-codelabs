@@ -1,4 +1,4 @@
-package com.jake.codelabs.uicomponent.presentation
+package com.jake.codelabs.uicomponent.features.pageone
 
 import android.os.Bundle
 import android.util.Log
@@ -7,10 +7,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.jake.codelabs.uicomponent.R
 
-class PageTwoFragment  : Fragment(R.layout.fragment_page_two){
+class PageOneFragment  : Fragment(R.layout.fragment_page_one){
     companion object {
-        fun newInstance(): PageTwoFragment {
-            return PageTwoFragment()
+        fun newInstance(): PageOneFragment {
+            return PageOneFragment()
         }
     }
 
@@ -19,17 +19,17 @@ class PageTwoFragment  : Fragment(R.layout.fragment_page_two){
         //Let fragment survive configuration change
         retainInstance = true
 
-        Log.d("#dev", "PageTwoFragment::onCreate")
-        Toast.makeText(requireContext(), "PageTwoFragment::onCreate", Toast.LENGTH_SHORT).show()
+        Log.d("#dev", "PageOneFragment::onCreate")
+        Toast.makeText(requireContext(), "PageOneFragment::onCreate", Toast.LENGTH_SHORT).show()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.d("#dev", "PageTwoFragment::onViewCreated")
+        Log.d("#dev", "PageOneFragment::onViewCreated")
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        Log.d("#dev", "PageTwoFragment::onDestroyView")
+        Log.d("#dev", "PageOneFragment::onDestroyView")
     }
 }
