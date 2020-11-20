@@ -27,10 +27,4 @@
         android:name="com.jake.codelabs.uicomponent.presentation.PageFourFragment"
         android:label="PageFourFragment"
         tools:layout="@layout/fragment_page_four" />
-
-    <fragment
-        android:id="@+id/pageFiveFragment"
-        android:name="com.jake.codelabs.uicomponent.presentation.PageFiveFragment"
-        android:label="PageFiveFragment"
-        tools:layout="@layout/fragment_page_five" />
 </navigation>

@@ -17,9 +17,10 @@
         app:layout_constraintBottom_toBottomOf="parent" />
 
     <TextView
+        android:id="@+id/logMessageTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="(Survive configuration change)"
+        android:text="(Recreate on configuration change)"
         app:layout_constraintTop_toBottomOf="@+id/titleTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

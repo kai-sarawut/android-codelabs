@@ -71,11 +71,6 @@ class MainActivity : AppCompatActivity() {
                 supportFragmentManager.findFragmentByTag(tag)
                     ?: PageFourFragment.newInstance()
             }
-            R.id.menu_5 -> {
-                tag = "PageFiveFragment"
-                supportFragmentManager.findFragmentByTag(tag)
-                    ?: PageFiveFragment.newInstance()
-            }
             else -> {
                 tag = "PageOneFragment"
                 supportFragmentManager.findFragmentByTag(tag)
