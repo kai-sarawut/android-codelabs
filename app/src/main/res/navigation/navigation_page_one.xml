@@ -6,7 +6,21 @@
     app:startDestination="@id/pageOneFragment">
     <fragment
         android:id="@+id/pageOneFragment"
-        android:name="com.jake.codelabs.uicomponent.features.pageone.PageOneFragment"
+        android:name="com.jake.codelabs.uicomponent.features.featureA.PageOneFragment"
         android:label="PageOneFragment"
-        tools:layout="@layout/fragment_page_one" />
+        tools:layout="@layout/fragment_page_one">
+        <action
+            android:id="@+id/action_to_SubPageOneFragment"
+            app:destination="@id/subPageOneFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/subPageOneFragment"
+        android:name="com.jake.codelabs.uicomponent.features.featureA.SubPageOneFragment"
+        android:label="SubPageOneFragment"
+        tools:layout="@layout/fragment_subpage_one" />
 </navigation>

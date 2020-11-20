@@ -6,7 +6,17 @@
     app:startDestination="@id/pageFourFragment">
     <fragment
         android:id="@+id/pageFourFragment"
-        android:name="com.jake.codelabs.uicomponent.features.pagefour.PageFourFragment"
+        android:name="com.jake.codelabs.uicomponent.features.featureA.PageFourFragment"
         android:label="PageFourFragment"
-        tools:layout="@layout/fragment_page_four" />
+        tools:layout="@layout/fragment_page_four">
+        <action
+            android:id="@+id/action_to_FeatureBActivity"
+            app:destination="@id/featureBActivity"/>
+    </fragment>
+
+    <activity
+        android:id="@+id/featureBActivity"
+        android:name="com.jake.codelabs.uicomponent.features.featureB.FeatureBActivity"
+        android:label="FeatureBActivity"
+        tools:layout="@layout/activity_feature_b"/>
 </navigation>

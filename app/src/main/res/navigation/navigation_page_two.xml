@@ -6,7 +6,20 @@
     app:startDestination="@id/pageTwoFragment">
     <fragment
         android:id="@+id/pageTwoFragment"
-        android:name="com.jake.codelabs.uicomponent.features.pagetwo.PageTwoFragment"
+        android:name="com.jake.codelabs.uicomponent.features.featureA.PageTwoFragment"
         android:label="PageTwoFragment"
-        tools:layout="@layout/fragment_page_two" />
+        tools:layout="@layout/fragment_page_two">
+        <action
+            android:id="@+id/action_to_SubPageTwoFragment"
+            app:destination="@id/subPageTwoFragment"
+            app:enterAnim="@anim/push_up_in"
+            app:popExitAnim="@anim/push_down_out"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/subPageTwoFragment"
+        android:name="com.jake.codelabs.uicomponent.features.featureA.SubPageTwoFragment"
+        android:label="SubPageOneFragment"
+        tools:layout="@layout/fragment_subpage_two" />
 </navigation>

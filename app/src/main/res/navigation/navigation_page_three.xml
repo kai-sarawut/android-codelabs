@@ -6,7 +6,7 @@
     app:startDestination="@id/pageThreeFragment">
     <fragment
         android:id="@+id/pageThreeFragment"
-        android:name="com.jake.codelabs.uicomponent.features.pagethree.PageThreeFragment"
+        android:name="com.jake.codelabs.uicomponent.features.featureA.PageThreeFragment"
         android:label="PageThreeFragment"
         tools:layout="@layout/fragment_page_three" />
 </navigation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_pageOneFragment"
+    app:startDestination="@id/pageOneFragment">
+    <fragment
+        android:id="@+id/pageOneFragment"
+        android:name="com.jake.codelabs.uicomponent.features.featureA.PageOneFragment"
+        android:label="PageOneFragment"
+        tools:layout="@layout/fragment_page_one" />
+
+    <fragment
+        android:id="@+id/pageTwoFragment"
+        android:name="com.jake.codelabs.uicomponent.features.featureA.PageTwoFragment"
+        android:label="PageTwoFragment"
+        tools:layout="@layout/fragment_page_two" />
+
+    <fragment
+        android:id="@+id/pageThreeFragment"
+        android:name="com.jake.codelabs.uicomponent.features.featureA.PageThreeFragment"
+        android:label="PageThreeFragment"
+        tools:layout="@layout/fragment_page_three" />
+
+    <fragment
+        android:id="@+id/pageFourFragment"
+        android:name="com.jake.codelabs.uicomponent.features.featureA.PageFourFragment"
+        android:label="PageFourFragment"
+        tools:layout="@layout/fragment_page_four" />
+</navigation>

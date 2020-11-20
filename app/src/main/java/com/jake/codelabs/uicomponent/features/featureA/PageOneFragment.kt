@@ -1,11 +1,13 @@
-package com.jake.codelabs.uicomponent.features.pageone
+package com.jake.codelabs.uicomponent.features.featureA
 
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.jake.codelabs.uicomponent.R
+import kotlinx.android.synthetic.main.fragment_page_one.*
 
 class PageOneFragment  : Fragment(R.layout.fragment_page_one){
     companion object {
@@ -26,6 +28,10 @@ class PageOneFragment  : Fragment(R.layout.fragment_page_one){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.d("#dev", "PageOneFragment::onViewCreated")
+
+        navigateSubPageOne.setOnClickListener {
+            findNavController().navigate(R.id.action_to_SubPageOneFragment)
+        }
     }
 
     override fun onDestroyView() {

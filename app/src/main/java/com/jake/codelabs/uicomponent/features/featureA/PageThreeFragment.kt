@@ -1,4 +1,4 @@
-package com.jake.codelabs.uicomponent.features.pagethree
+package com.jake.codelabs.uicomponent.features.featureA
 
 import android.os.Bundle
 import android.util.Log
@@ -16,8 +16,6 @@ class PageThreeFragment  : Fragment(R.layout.fragment_page_three){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //Let fragment survive configuration change
-        retainInstance = true
 
         Log.d("#dev", "PageThreeFragment::onCreate")
         Toast.makeText(requireContext(), "PageThreeFragment::onCreate", Toast.LENGTH_SHORT).show()
