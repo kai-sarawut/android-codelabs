@@ -13,7 +13,9 @@
             android:id="@+id/action_to_SubPageTwoFragment"
             app:destination="@id/subPageTwoFragment"
             app:enterAnim="@anim/push_up_in"
-            app:popExitAnim="@anim/push_down_out"/>
+            app:popExitAnim="@anim/push_down_out"
+            app:exitAnim="@anim/fadeout"
+            app:popEnterAnim="@anim/fadein"/>
 
     </fragment>
 

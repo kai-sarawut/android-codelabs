@@ -8,5 +8,19 @@
         android:id="@+id/pageThreeFragment"
         android:name="com.jake.codelabs.uicomponent.features.featureA.PageThreeFragment"
         android:label="PageThreeFragment"
-        tools:layout="@layout/fragment_page_three" />
+        tools:layout="@layout/fragment_page_three">
+        <action
+            android:id="@+id/action_to_SubPageThreeFragment"
+            app:destination="@id/subPageThreeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/subPageThreeFragment"
+        android:name="com.jake.codelabs.uicomponent.features.featureA.SubPageThreeFragment"
+        android:label="SubPageThreeFragment"
+        tools:layout="@layout/fragment_subpage_three" />
 </navigation>

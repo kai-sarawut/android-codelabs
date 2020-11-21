@@ -29,8 +29,12 @@ class PageOneFragment  : Fragment(R.layout.fragment_page_one){
         super.onViewCreated(view, savedInstanceState)
         Log.d("#dev", "PageOneFragment::onViewCreated")
 
-        navigateSubPageOne.setOnClickListener {
+        navigatePageOneSub1.setOnClickListener {
             findNavController().navigate(R.id.action_to_SubPageOneFragment)
+        }
+
+        navigatePageOneSub2.setOnClickListener {
+            findNavController().navigate(R.id.action_to_PageOneSubPage2Fragment)
         }
     }
 

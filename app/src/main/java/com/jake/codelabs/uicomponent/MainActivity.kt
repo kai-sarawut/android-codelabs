@@ -3,11 +3,15 @@ package com.jake.codelabs.uicomponent
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.View
+import android.view.ViewGroup
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
+import androidx.navigation.NavDestination
+import androidx.navigation.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.jake.codelabs.uicomponent.features.featureA.PageFourFragment
 import com.jake.codelabs.uicomponent.features.featureA.PageOneFragment
@@ -27,12 +31,6 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             //TODO: setup initial data
             setupBottomNavigationView()
-        }
-
-        if(resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            bottomNavigationView.visibility = View.GONE
-        } else {
-            bottomNavigationView.visibility = View.VISIBLE
         }
     }
 
@@ -89,8 +87,26 @@ class MainActivity : AppCompatActivity() {
             intent = intent
         )
 
+        val onDestinationChangedListener =
+            NavController.OnDestinationChangedListener { controller, destination, arguments ->
+                Log.d("#dev", "navController graph : ${destination.label}")
+                if(destination.id == R.id.subPageTwoFragment
+                    || destination.id == R.id.subPageThreeFragment
+                    || destination.id == R.id.pageOneSubPage2Fragment) {
+                    bottomNavigationView.visibility = View.GONE
+                } else {
+                    Handler().postDelayed({
+                        bottomNavigationView.visibility = View.VISIBLE
+                    }, 200)
+
+                }
+            }
+
         controller.observe(this, Observer { navController ->
             Log.d("#dev", "navController graph : ${navController.graph.id}")
+
+            navController.removeOnDestinationChangedListener(onDestinationChangedListener)
+            navController.addOnDestinationChangedListener(onDestinationChangedListener)
         })
 
         currentNavController = controller

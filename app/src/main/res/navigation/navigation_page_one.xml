@@ -16,6 +16,12 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_to_PageOneSubPage2Fragment"
+            app:destination="@id/pageOneSubPage2Fragment"
+            app:enterAnim="@anim/fadein"
+            app:popEnterAnim="@anim/fadein"/>
     </fragment>
 
     <fragment
@@ -23,4 +29,10 @@
         android:name="com.jake.codelabs.uicomponent.features.featureA.SubPageOneFragment"
         android:label="SubPageOneFragment"
         tools:layout="@layout/fragment_subpage_one" />
+
+    <fragment
+        android:id="@+id/pageOneSubPage2Fragment"
+        android:name="com.jake.codelabs.uicomponent.features.featureA.PageOneSubPage2Fragment"
+        android:label="SubPageOneFragment"
+        tools:layout="@layout/fragment_pageone_subpage2" />
 </navigation>
