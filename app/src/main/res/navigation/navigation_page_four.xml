@@ -18,5 +18,5 @@
         android:id="@+id/featureBActivity"
         android:name="com.jake.codelabs.uicomponent.features.featureB.FeatureBActivity"
         android:label="FeatureBActivity"
-        tools:layout="@layout/activity_feature_b"/>
+        tools:layout="@layout/activity_feature_b" />
 </navigation>

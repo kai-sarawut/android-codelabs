@@ -28,7 +28,10 @@ class PageFourFragment  : Fragment(R.layout.fragment_page_four){
         Log.d("#dev", "PageFourFragment::onViewCreated")
 
         navigateFeatureB.setOnClickListener {
-            findNavController().navigate(R.id.action_to_FeatureBActivity)
+            val bundle = Bundle().apply {
+                putParcelable("pageDataModel", PageDataModel(id = "1", title = "Hello"))
+            }
+            findNavController().navigate(R.id.action_to_FeatureBActivity, bundle)
         }
     }
 

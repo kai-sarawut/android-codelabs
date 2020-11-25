@@ -5,11 +5,14 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
 import com.jake.codelabs.uicomponent.R
+import com.jake.codelabs.uicomponent.features.featureA.PageDataModel
 
 class FeatureBActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feature_b)
+
+        val pageDataModel = intent?.getParcelableExtra<PageDataModel>("pageDataModel")
 
         Log.i("#dev", "FeatureBActivity::onCreate")
         if(savedInstanceState == null) {
