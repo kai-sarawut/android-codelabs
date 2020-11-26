@@ -1,6 +1,7 @@
 package com.jake.codelabs.uicomponent
 
 import android.content.res.Configuration
+import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
