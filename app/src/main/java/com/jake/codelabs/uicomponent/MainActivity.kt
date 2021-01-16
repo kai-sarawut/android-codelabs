@@ -1,24 +1,18 @@
 package com.jake.codelabs.uicomponent
 
-import android.content.res.Configuration
-import android.graphics.Rect
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
 import android.view.View
-import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
-import androidx.navigation.NavDestination
-import androidx.navigation.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.jake.codelabs.uicomponent.features.featureA.PageFourFragment
 import com.jake.codelabs.uicomponent.features.featureA.PageOneFragment
 import com.jake.codelabs.uicomponent.features.featureA.PageThreeFragment
 import com.jake.codelabs.uicomponent.features.featureA.PageTwoFragment
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private var currentNavController: LiveData<NavController>? = null
@@ -28,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.i("#dev", "MainActivity::onCreate")
+        Log.i("#dev", "MainActivity::onCreate---")
         if (savedInstanceState == null) {
             //TODO: setup initial data
             setupBottomNavigationView()

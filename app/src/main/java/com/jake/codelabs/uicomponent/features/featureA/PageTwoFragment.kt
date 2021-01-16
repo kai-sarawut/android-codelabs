@@ -1,15 +1,14 @@
 package com.jake.codelabs.uicomponent.features.featureA
 
-import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.jake.codelabs.feature.home.extension.viewBinding
 import com.jake.codelabs.uicomponent.R
-import kotlinx.android.synthetic.main.fragment_page_two.*
-import kotlinx.android.synthetic.main.fragment_subpage_two.*
+import com.jake.codelabs.uicomponent.databinding.FragmentPageTwoBinding
 
 class PageTwoFragment  : Fragment(R.layout.fragment_page_two){
     companion object {
@@ -17,6 +16,8 @@ class PageTwoFragment  : Fragment(R.layout.fragment_page_two){
             return PageTwoFragment()
         }
     }
+
+    private val binding by viewBinding(FragmentPageTwoBinding::bind)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +30,7 @@ class PageTwoFragment  : Fragment(R.layout.fragment_page_two){
         super.onViewCreated(view, savedInstanceState)
         Log.d("#dev", "PageTwoFragment::onViewCreated")
 
-        navigateSubPageTwo.setOnClickListener {
+        binding.navigateSubPageTwo.setOnClickListener {
             findNavController().navigate(R.id.action_to_SubPageTwoFragment)
         }
     }

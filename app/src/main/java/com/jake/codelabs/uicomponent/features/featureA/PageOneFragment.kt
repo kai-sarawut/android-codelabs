@@ -7,8 +7,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.jake.codelabs.feature.home.extension.viewBinding
 import com.jake.codelabs.uicomponent.R
-import kotlinx.android.synthetic.main.fragment_page_one.*
+import com.jake.codelabs.uicomponent.databinding.FragmentPageOneBinding
 
 class PageOneFragment  : Fragment(R.layout.fragment_page_one){
     private var isContentCached = false
@@ -18,6 +19,8 @@ class PageOneFragment  : Fragment(R.layout.fragment_page_one){
             return PageOneFragment()
         }
     }
+
+    private val binding by viewBinding(FragmentPageOneBinding::bind)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,15 +35,15 @@ class PageOneFragment  : Fragment(R.layout.fragment_page_one){
         super.onViewCreated(view, savedInstanceState)
         Log.d("#dev", "PageOneFragment::onViewCreated")
 
-        navigatePageOneSub1.setOnClickListener {
+        binding.navigatePageOneSub1.setOnClickListener {
             findNavController().navigate(R.id.action_to_SubPageOneFragment)
         }
 
-        navigatePageOneSub2.setOnClickListener {
+        binding.navigatePageOneSub2.setOnClickListener {
             findNavController().navigate(R.id.action_to_PageOneSubPage2Fragment)
         }
 
-        reloadContentButton.setOnClickListener {
+        binding.reloadContentButton.setOnClickListener {
             reloadContent()
         }
 
@@ -56,8 +59,8 @@ class PageOneFragment  : Fragment(R.layout.fragment_page_one){
 
     private fun reloadContent() {
         isContentCached = false
-        progressView.visibility = View.VISIBLE
-        contentTextView.visibility = View.GONE
+        binding.progressView.visibility = View.VISIBLE
+        binding.contentTextView.visibility = View.GONE
 
         initBackgroundProcess()
     }
@@ -77,8 +80,8 @@ class PageOneFragment  : Fragment(R.layout.fragment_page_one){
     }
 
     private fun updateUi() {
-        progressView.visibility = View.GONE
-        contentTextView.apply {
+        binding.progressView.visibility = View.GONE
+        binding.contentTextView.apply {
             text = getContentText()
             visibility = View.VISIBLE
         }

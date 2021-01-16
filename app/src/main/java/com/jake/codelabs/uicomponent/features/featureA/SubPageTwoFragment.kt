@@ -9,12 +9,14 @@ import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.jake.codelabs.feature.home.extension.viewBinding
 import com.jake.codelabs.uicomponent.R
+import com.jake.codelabs.uicomponent.databinding.FragmentSubpageTwoBinding
 import com.jake.codelabs.uicomponent.utils.hideSystemUI
 import com.jake.codelabs.uicomponent.utils.showSystemUI
-import kotlinx.android.synthetic.main.fragment_subpage_two.*
 
 class SubPageTwoFragment : Fragment(R.layout.fragment_subpage_two) {
+    private val binding by viewBinding(FragmentSubpageTwoBinding::bind)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,10 +45,10 @@ class SubPageTwoFragment : Fragment(R.layout.fragment_subpage_two) {
 
     private fun initView(view: View) {
         if(resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            titleBar.visibility = View.GONE
+            binding.titleBar.visibility = View.GONE
             hideSystemUI(view)
         } else {
-            titleBar.visibility = View.VISIBLE
+            binding.titleBar.visibility = View.VISIBLE
             showSystemUI(view)
         }
 
@@ -67,8 +69,8 @@ class SubPageTwoFragment : Fragment(R.layout.fragment_subpage_two) {
 
     private val handler = Handler()
     private val runnableProcess = Runnable {
-        progressView.visibility = View.GONE
-        logMessageTextView.text = "Hello world from a long process"
-        logMessageTextView.visibility = View.VISIBLE
+        binding.progressView.visibility = View.GONE
+        binding.logMessageTextView.text = "Hello world from a long process"
+        binding.logMessageTextView.visibility = View.VISIBLE
     }
 }

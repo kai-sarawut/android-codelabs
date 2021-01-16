@@ -5,10 +5,13 @@ import android.os.Handler
 import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.jake.codelabs.feature.home.extension.viewBinding
 import com.jake.codelabs.uicomponent.R
-import kotlinx.android.synthetic.main.fragment_subpage_two.*
+import com.jake.codelabs.uicomponent.databinding.FragmentSubpageOneBinding
 
 class SubPageOneFragment : Fragment(R.layout.fragment_subpage_one) {
+    private val binding by viewBinding(FragmentSubpageOneBinding::bind)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -40,8 +43,8 @@ class SubPageOneFragment : Fragment(R.layout.fragment_subpage_one) {
 
     private val handler = Handler()
     private val runnableProcess = Runnable {
-        progressView.visibility = View.GONE
-        logMessageTextView.text = "Hello world from a long process"
-        logMessageTextView.visibility = View.VISIBLE
+        binding.progressView.visibility = View.GONE
+        binding.logMessageTextView.text = "Hello world from a long process"
+        binding.logMessageTextView.visibility = View.VISIBLE
     }
 }

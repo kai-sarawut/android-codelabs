@@ -6,8 +6,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.jake.codelabs.feature.home.extension.viewBinding
 import com.jake.codelabs.uicomponent.R
-import kotlinx.android.synthetic.main.fragment_page_four.*
+import com.jake.codelabs.uicomponent.databinding.FragmentPageFourBinding
 
 class PageFourFragment  : Fragment(R.layout.fragment_page_four){
     companion object {
@@ -15,6 +16,8 @@ class PageFourFragment  : Fragment(R.layout.fragment_page_four){
             return PageFourFragment()
         }
     }
+
+    private val binding by viewBinding(FragmentPageFourBinding::bind)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +30,7 @@ class PageFourFragment  : Fragment(R.layout.fragment_page_four){
         super.onViewCreated(view, savedInstanceState)
         Log.d("#dev", "PageFourFragment::onViewCreated")
 
-        navigateFeatureB.setOnClickListener {
+        binding.navigateFeatureB.setOnClickListener {
             val bundle = Bundle().apply {
                 putParcelable("pageDataModel", PageDataModel(id = "1", title = "Hello"))
             }

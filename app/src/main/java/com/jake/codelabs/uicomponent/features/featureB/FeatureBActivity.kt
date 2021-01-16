@@ -2,12 +2,15 @@ package com.jake.codelabs.uicomponent.features.featureB
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
+import com.jake.codelabs.feature.home.extension.viewBinding
 import com.jake.codelabs.uicomponent.R
+import com.jake.codelabs.uicomponent.databinding.ActivityFeatureBBinding
 import com.jake.codelabs.uicomponent.features.featureA.PageDataModel
 
 class FeatureBActivity : AppCompatActivity() {
+    private val binding by viewBinding(ActivityFeatureBBinding::inflate)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feature_b)
