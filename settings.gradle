@@ -1,3 +1,6 @@
 include ':app'
 rootProject.name = "UI Component Codelabs"
+
 include ':features:home'
+include ':features:setting'
+include ':common:share'

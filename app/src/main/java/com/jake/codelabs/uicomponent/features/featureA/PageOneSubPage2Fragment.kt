@@ -5,7 +5,7 @@ import android.os.Handler
 import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.jake.codelabs.feature.home.extension.viewBinding
+import com.jake.codelabs.common.share.extension.viewBinding
 import com.jake.codelabs.uicomponent.R
 import com.jake.codelabs.uicomponent.databinding.FragmentPageoneSubpage2Binding
 

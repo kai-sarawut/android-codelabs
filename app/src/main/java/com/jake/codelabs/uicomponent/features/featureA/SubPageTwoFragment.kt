@@ -9,7 +9,7 @@ import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.jake.codelabs.feature.home.extension.viewBinding
+import com.jake.codelabs.common.share.extension.viewBinding
 import com.jake.codelabs.uicomponent.R
 import com.jake.codelabs.uicomponent.databinding.FragmentSubpageTwoBinding
 import com.jake.codelabs.uicomponent.utils.hideSystemUI

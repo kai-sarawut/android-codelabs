@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.jake.codelabs.feature.home.extension.viewBinding
+import com.jake.codelabs.common.share.extension.viewBinding
 import com.jake.codelabs.uicomponent.R
 import com.jake.codelabs.uicomponent.databinding.FragmentPageOneBinding
 

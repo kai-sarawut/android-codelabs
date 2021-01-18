@@ -1,4 +1,4 @@
-package com.jake.codelabs.uicomponent.features.featureA
+package com.jake.codelabs.common.share.domain
 
 import android.os.Parcelable
 import kotlinx.android.parcel.IgnoredOnParcel

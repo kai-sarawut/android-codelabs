@@ -2,6 +2,7 @@ package com.jake.codelabs.uicomponent
 
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -68,10 +69,11 @@ class MainActivity : AppCompatActivity() {
         // Way#1 - Multiple navigation graph
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navGraphIds = listOf(
+            R.navigation.navigation_home,
             R.navigation.navigation_page_one,
             R.navigation.navigation_page_two,
             R.navigation.navigation_page_three,
-            R.navigation.navigation_page_four
+            R.navigation.navigation_setting
         )
 
         // Setup the bottom navigation view with a list of navigation graphs
@@ -90,10 +92,11 @@ class MainActivity : AppCompatActivity() {
                     || destination.id == R.id.pageOneSubPage2Fragment) {
                     bottomNavigationView.visibility = View.GONE
                 } else {
-                    Handler().postDelayed({
-                        bottomNavigationView.visibility = View.VISIBLE
-                    }, 200)
-
+                    Looper.myLooper()?.let { looper ->
+                        Handler(looper).postDelayed({
+                            bottomNavigationView.visibility = View.VISIBLE
+                        }, 200)
+                    }
                 }
             }
 

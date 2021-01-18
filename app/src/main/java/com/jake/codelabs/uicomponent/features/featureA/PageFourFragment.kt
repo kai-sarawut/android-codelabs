@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.jake.codelabs.feature.home.extension.viewBinding
+import com.jake.codelabs.common.share.extension.viewBinding
 import com.jake.codelabs.uicomponent.R
 import com.jake.codelabs.uicomponent.databinding.FragmentPageFourBinding
 
@@ -32,7 +32,9 @@ class PageFourFragment  : Fragment(R.layout.fragment_page_four){
 
         binding.navigateFeatureB.setOnClickListener {
             val bundle = Bundle().apply {
-                putParcelable("pageDataModel", PageDataModel(id = "1", title = "Hello"))
+                putParcelable("pageDataModel",
+                    com.jake.codelabs.common.share.domain.PageDataModel(id = "1", title = "Hello")
+                )
             }
             findNavController().navigate(R.id.action_to_FeatureBActivity, bundle)
         }

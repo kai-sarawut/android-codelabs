@@ -3,10 +3,10 @@ package com.jake.codelabs.uicomponent.features.featureB
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.jake.codelabs.feature.home.extension.viewBinding
+import com.jake.codelabs.common.share.extension.viewBinding
 import com.jake.codelabs.uicomponent.R
 import com.jake.codelabs.uicomponent.databinding.ActivityFeatureBBinding
-import com.jake.codelabs.uicomponent.features.featureA.PageDataModel
+import com.jake.codelabs.common.share.domain.PageDataModel
 
 class FeatureBActivity : AppCompatActivity() {
     private val binding by viewBinding(ActivityFeatureBBinding::inflate)
@@ -15,7 +15,7 @@ class FeatureBActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feature_b)
 
-        val pageDataModel = intent?.getParcelableExtra<PageDataModel>("pageDataModel")
+        val pageDataModel = intent?.getParcelableExtra<com.jake.codelabs.common.share.domain.PageDataModel>("pageDataModel")
 
         Log.i("#dev", "FeatureBActivity::onCreate")
         if(savedInstanceState == null) {
