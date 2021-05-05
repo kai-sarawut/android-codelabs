@@ -1,0 +1,6 @@
+com/jake/codelabs/features/multimedia/BuildConfig.java
+ com.jake.codelabs.features.multimedia.BuildConfig
+com/jake/codelabs/features/multimedia/databinding/ActivityPlayerBinding.java
+ com.jake.codelabs.features.multimedia.databinding.ActivityPlayerBinding
+com/jake/codelabs/features/multimedia/databinding/FragmentPlayerBinding.java
+ com.jake.codelabs.features.multimedia.databinding.FragmentPlayerBinding

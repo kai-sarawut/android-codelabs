@@ -1,0 +1,6 @@
+R_DEF: Internal format may change without notice
+local
+id playerFragment
+id playerView
+layout activity_player
+layout fragment_player
